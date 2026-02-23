@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web | Portfolio</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eff1f2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* GRID LAYOUT */
+.container {
+  display: grid;
+  grid-template-areas:
+    "sidebar"
+    "content"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 130px 1fr auto;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  grid-area: sidebar;
+  background: linear-gradient(
+    to right,
+    #c86b8e,
+    #da69fa,
+    #6e7dfd
+  );
+  padding: 1em;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  opacity: 1;
+}
+
+/* CONTENT */
+.content {
+  grid-area: content;
+  padding: 2em;
+}
+
+.hero {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.hero img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  color: #373046;
+  font-weight: 300;
+}
+
+.hero h2 {
+  font-size: 1.5em;
+  color: #567bfb;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #6c7a89;
+  line-height: 1.6em;
+  margin-bottom: 20px;
+}
+
+.action-btn {
+  display: inline-block;
+  background: #567bfb;
+  color: white;
+  padding: 0.6em 2em;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.action-btn:hover {
+  background: #3d5edb;
+}
+
+/* FOOTER */
+.footer {
+  grid-area: footer;
+  background: white;
+  padding: 2em 1em;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+  text-align: center;
+}
+
+footer ul li img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+footer ul li p {
+  font-size: 0.8em;
+  color: #777;
+}
+
+/* DESKTOP VERSION */
+@media (min-width: 1040px) {
+  .container {
+    grid-template-areas:
+      "sidebar content"
+      "sidebar footer";
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .sidebar {
+    padding-top: 6em;
+  }
+
+  .hero {
+    text-align: left;
+    margin-top: 6em;
+  }
+
+  .hero img {
+    float: right;
+    margin-left: 30px;
+  }
+
+  .hero p {
+    width: 60%;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <div class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main class="content">
+    <section class="hero">
+      <img src="online.png" alt="Profile Image">
+      <h1>Profesi</h1>
+      <h2>Junior Content Writer at Dicoding</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Dignissimos, aperiam dolore assumenda velit repellendus 
+        recusandae magni consectetur mollitia facere incidunt.
+      </p>
+      <a href="#" class="action-btn">Profile Saya</a>
+    </section>
+  </main>
+
+  <div class="footer">
+    <footer>
+      <ul>
+        <li>
+          <img src="instagram.png" alt="Instagram">
+          <p>Instagram</p>
+        </li>
+        <li>
+          <img src="facebook.png" alt="Facebook">
+          <p>Facebook</p>
+        </li>
+        <li>
+          <img src="twitter.png" alt="Twitter">
+          <p>Twitter</p>
+        </li>
+        <li>
+          <img src="telegram.png" alt="Telegram">
+          <p>Telegram</p>
+        </li>
+      </ul>
+    </footer>
+  </div>
+
+</div>
+
+</body>
+</html>
